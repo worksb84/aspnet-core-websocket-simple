@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNETCoreWS", "AspNETCoreWS.csproj", "{59375B96-311B-2A8B-64ED-4F8851253A4E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59375B96-311B-2A8B-64ED-4F8851253A4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59375B96-311B-2A8B-64ED-4F8851253A4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59375B96-311B-2A8B-64ED-4F8851253A4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59375B96-311B-2A8B-64ED-4F8851253A4E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E6468E9D-FE39-42FC-AC30-1751FBA2F550}
+	EndGlobalSection
+EndGlobal

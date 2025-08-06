@@ -25,26 +25,25 @@ public class WebSocketController : Controller
             session.WebSocket = webSocket;
             _sessionManager.AddSession(session);
 
-            await Receive(
-                webSocket,
-                async (result, buffer) =>
-                {
-                    if (result.MessageType == WebSocketMessageType.Text)
-                    {
-                        var msg = Encoding.UTF8.GetString(buffer, 0, result.Count);
-
-                        return;
-                    }
-                    else if (result.MessageType == WebSocketMessageType.Close)
-                    {
-                        return;
-                    }
-                }
-            );
+            await Receive(webSocket, ReceiveResult);
         }
         else
         {
             HttpContext.Response.StatusCode = StatusCodes.Status400BadRequest;
+        }
+    }
+
+    private void ReceiveResult(WebSocketReceiveResult result, byte[] buffer)
+    {
+        if (result.MessageType == WebSocketMessageType.Text)
+        {
+            var msg = Encoding.UTF8.GetString(buffer, 0, result.Count);
+
+            return;
+        }
+        else if (result.MessageType == WebSocketMessageType.Close)
+        {
+            return;
         }
     }
 
